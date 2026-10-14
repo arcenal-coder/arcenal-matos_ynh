@@ -1,10 +1,10 @@
-# ARCenal Matos 0.1.1~ynh3 — preview
+# ARCenal Matos 0.1.1~ynh4 — preview
 
 - RÉUSSI : application, 61 tests locaux et 16 parcours Chromium.
 - RÉUSSI : SSO/identité de proxy et refus d'accès testés ; données PostgreSQL locales.
 - RÉUSSI : logo du portail YunoHost public réel téléchargé ; absence du logo dans le paquet distribué.
 - RÉUSSI : syntaxe des scripts ; analyse statique de la candidate finalisée à effectuer avant publication.
-- À REVALIDER : package_check complet sur candidate 0.1.1~ynh3.
+- À REVALIDER : package_check complet sur candidate 0.1.1~ynh4.
 - NON_EXÉCUTÉ : connexion utilisateur réelle YunoHost et délivrance SMTP sur le serveur cible ; SSH port 22 inaccessible dans cette session.
 - NON_EXÉCUTÉ : profil Hermès réel et téléphones/étiquettes physiques.
 
@@ -34,3 +34,9 @@ Essai 38617894338 : portail SSO connecté mais Matos refuse l'identité.
 Cause : ASGIRequest de Django ignore les en-têtes HTTP contenant `_`.
 Nginx transmet désormais YNH-USER depuis YNH_USER injecté par SSOwat ;
 Django le normalise en HTTP_YNH_USER. Identité effacée sur la route MCP.
+
+Essai 38618833891 : installation/retrait/réinstallation, SSO, assets, upgrade
+et changement URL réussis. Sauvegarde/restauration en échec web 502 après
+restauration ; service web absent de la liste des unités actives.
+Restauration alignée sur example_ynh : propriétaire app:www-data des sources,
+réactivation explicite du service systemd restauré avant démarrage.
