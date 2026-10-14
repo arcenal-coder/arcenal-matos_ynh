@@ -13,6 +13,7 @@ ynh_app_setting_set --key=mcp_token --value="$mcp_token"
 chown -R "$app:www-data" "$install_dir"
 matos_dependencies
 matos_config
+ynh_config_add_nginx
 yunohost service add "$app" --description="ARCenal Matos" --log="/var/log/$app/$app.log"
 matos_manage migrate --noinput
 matos_manage sync_users
