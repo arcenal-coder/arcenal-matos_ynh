@@ -1,10 +1,11 @@
-# ARCenal Matos 0.1.1~ynh4 — preview
+# ARCenal Matos 0.1.1~ynh5 — preview
 
 - RÉUSSI : application, 61 tests locaux et 16 parcours Chromium.
 - RÉUSSI : SSO/identité de proxy et refus d'accès testés ; données PostgreSQL locales.
 - RÉUSSI : logo du portail YunoHost public réel téléchargé ; absence du logo dans le paquet distribué.
 - RÉUSSI : syntaxe des scripts ; analyse statique de la candidate finalisée à effectuer avant publication.
-- À REVALIDER : package_check complet sur candidate 0.1.1~ynh4.
+- RÉUSSI : package_check complet 0.1.1~ynh4, run 38621318360, cinq scénarios réussis sur YunoHost 12.1.41.2 amd64.
+- À REVALIDER : candidate 0.1.1~ynh5 rétablit les permissions privées 0400 app:app du fichier .env après restauration, comme à l'installation.
 - NON_EXÉCUTÉ : connexion utilisateur réelle YunoHost et délivrance SMTP sur le serveur cible ; SSH port 22 inaccessible dans cette session.
 - NON_EXÉCUTÉ : profil Hermès réel et téléphones/étiquettes physiques.
 
