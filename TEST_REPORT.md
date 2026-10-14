@@ -1,4 +1,4 @@
-# ARCenal Matos 0.1.0~ynh2 — preview
+# ARCenal Matos 0.1.0~ynh3 — preview
 
 - RÉUSSI : application, 60 tests locaux et 16 parcours Chromium.
 - RÉUSSI : SSO/identité de proxy et refus d'accès testés ; données PostgreSQL locales.
@@ -14,3 +14,8 @@ preuve de mise en service métier ou de qualification stable.
 Premier package_check sur YunoHost 12.1.41.2 : ÉCHEC d'installation, lecture
 de current_host sans newline sous errexit. Lecture corrigée et déclaration
 Nginx explicite dans install/upgrade ; nouvelle qualification requise.
+
+Deuxième essai : installation exécutée, refus de qualification dû aux nombreux
+warnings du téléchargement cosmétique sur certificat autosigné de test.
+Sortie de cette opération routée vers stdout, fallback conservé ; aucune
+vérification TLS désactivée et aucun scénario exclu.

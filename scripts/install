@@ -18,7 +18,7 @@ yunohost service add "$app" --description="ARCenal Matos" --log="/var/log/$app/$
 matos_manage migrate --noinput
 matos_manage sync_users
 matos_manage bootstrap_admin "$admin"
-matos_manage refresh_branding || ynh_print_info "Logo ARCenal de secours ; le logo YunoHost sera réessayé par le timer."
+matos_manage refresh_branding 2>&1 || ynh_print_info "Logo ARCenal de secours ; le logo YunoHost sera réessayé par le timer."
 matos_manage collectstatic --noinput
 ynh_systemctl --service="$app" --action=start
 systemctl enable --now "$app-jobs.timer"
