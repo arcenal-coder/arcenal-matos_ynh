@@ -1,10 +1,10 @@
-# ARCenal Matos 0.1.1~ynh1 — preview
+# ARCenal Matos 0.1.1~ynh2 — preview
 
 - RÉUSSI : application, 61 tests locaux et 16 parcours Chromium.
 - RÉUSSI : SSO/identité de proxy et refus d'accès testés ; données PostgreSQL locales.
 - RÉUSSI : logo du portail YunoHost public réel téléchargé ; absence du logo dans le paquet distribué.
 - RÉUSSI : syntaxe des scripts ; analyse statique de la candidate finalisée à effectuer avant publication.
-- À REVALIDER : package_check complet sur candidate 0.1.1~ynh1.
+- À REVALIDER : package_check complet sur candidate 0.1.1~ynh2.
 - NON_EXÉCUTÉ : connexion utilisateur réelle YunoHost et délivrance SMTP sur le serveur cible ; SSH port 22 inaccessible dans cette session.
 - NON_EXÉCUTÉ : profil Hermès réel et téléphones/étiquettes physiques.
 
@@ -24,3 +24,8 @@ Troisième essai (38596598439) : linter et installation réussis ; contrôle web
 anonyme en échec (401 attendu par l'application, 200 attendu par le test implicite).
 Candidate 0.1.1 : tests explicites du tableau de bord SSO et du refus anonyme,
 fallback branding sans traceback, génération des secrets sans xtrace.
+
+Essai 38616939560 : installation 0.1.1 réussie, portail SSO de l'image
+appci refuse le mot de passe du compte d'essai avant toute requête Matos.
+Préinstallation : alignement du mot de passe de ce compte sur YUNO_PWD du
+checker, sans xtrace ; tests SSO et cycle de vie conservés.
