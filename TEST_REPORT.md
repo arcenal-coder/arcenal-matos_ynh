@@ -4,6 +4,7 @@
 - RÉUSSI : 72 tests applicatifs et 19 parcours Chromium ; migrations depuis le schéma 0.1.1 avec conservation d'une fiche, de sa clé et d'un document privé.
 - À REVALIDER : cycle de vie complet et scénario de mise à jour depuis b8ef047930d7c64944b83a485c2c8f13dd414794.
 - Cause du blocage catalogue : niveau 0 publié alors que YunoHost exige >= 5 pour annoncer une mise à jour. Le niveau technique ARCenal sera documenté séparément du résultat officiel communautaire après qualification.
+- Essai 38849705972 : installation, sauvegarde/restauration et upgrade même version exécutés ; scénario depuis 0.1.1 arrêté avant installation car le checkout GitHub superficiel ne contenait pas la révision historique. Workflow corrigé avec historique Git complet ; aucun scénario désactivé.
 
 ## Historique des qualifications précédentes
 
