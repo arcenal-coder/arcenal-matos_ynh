@@ -3,7 +3,7 @@ id = "arcenal-matos"
 name = "ARCenal Matos"
 description.en = "Internal multisite asset management with a logistics MCP server"
 description.fr = "Gestion interne multisite des actifs avec serveur MCP logisticien"
-version = "0.1.2~ynh1"
+version = "0.2.0~ynh1"
 maintainers = ["arcenal-coder"]
 
 [upstream]
@@ -33,8 +33,8 @@ ram.runtime = "500M"
 
 [resources]
   [resources.sources.main]
-  url = "https://github.com/arcenal-coder/arcenal-matos/releases/download/v0.1.2/arcenal-matos-0.1.2.tar.gz"
-  sha256 = "04dcf13b27f3a998c9aabde98d297ed67df5b2b41155605f6253e327164f0a65"
+  url = "https://github.com/arcenal-coder/arcenal-matos/releases/download/v0.2.0/arcenal-matos-0.2.0.tar.gz"
+  sha256 = "8c717f8b984eed15197bc6be3f1cb325f8e795df7d2473b5ed4e57f0e3ebfaab"
   in_subdir = true
   [resources.system_user]
   allow_email = true

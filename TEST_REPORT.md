@@ -1,4 +1,14 @@
-# ARCenal Matos 0.1.2~ynh1 — candidate preview
+# ARCenal Matos 0.2.0~ynh1 — candidate preview
+
+## Finalisation 0.2.0
+
+- Source immuable v0.2.0, SHA256 8c717f8b984eed15197bc6be3f1cb325f8e795df7d2473b5ed4e57f0e3ebfaab.
+- RÉUSSI : 119 tests backend et 25 parcours navigateur, versions synchronisées, archives sans runtime/secrets, migration des données existantes vérifiée localement.
+- À QUALIFIER : installation/cycle de vie complet, upgrades depuis 0.1.1~ynh5 et la version distribuée 0.1.2~ynh1. Contrôles web supplémentaires : EPI actif, Paramètres → Modules et accès Dosimètres refusé quand inactif.
+- EPI, Dosimètres passifs et activation indépendante ; seules les propositions/préparations sont confiées à l'agent, aucune dose ou confirmation physique automatique.
+- Qualification technique ARCenal documentée séparément du résultat du catalogue officiel ; aucun abaissement des contrôles ou passage stable implicite.
+
+## Historique 0.1.2
 
 - Source immuable 0.1.2, SHA256 04dcf13b27f3a998c9aabde98d297ed67df5b2b41155605f6253e327164f0a65.
 - RÉUSSI : 72 tests applicatifs et 19 parcours Chromium ; migrations depuis le schéma 0.1.1 avec conservation d'une fiche, de sa clé et d'un document privé.

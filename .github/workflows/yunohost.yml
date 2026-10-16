@@ -34,7 +34,7 @@ jobs:
           sudo env PATH="/tmp/package-check-env/bin:$PATH" YNHDEV_BACKEND=incus DIST=bookworm YNH_BRANCH=stable /tmp/package_check/package_check.sh "$GITHUB_WORKSPACE"
           sudo chown -R "$USER:$USER" /tmp/package_check
           python3 /tmp/package_check/package_linter/package_linter.py "$GITHUB_WORKSPACE" --json > /tmp/linter_report.json
-          python3 tools/verify_package_report.py /tmp/package_check --linter-report /tmp/linter_report.json --upgrade-from b8ef047930d7c64944b83a485c2c8f13dd414794 --qualification-output /tmp/arcenal-qualification.json
+          python3 tools/verify_package_report.py /tmp/package_check --linter-report /tmp/linter_report.json --upgrade-from 3d882348b212835d9adc61c54416ad72a6185c04 --qualification-output /tmp/arcenal-qualification.json
       - name: Keep evidence
         if: always()
         uses: actions/upload-artifact@v4
