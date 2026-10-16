@@ -1,4 +1,11 @@
-# ARCenal Matos 0.1.1~ynh5 — preview
+# ARCenal Matos 0.1.2~ynh1 — candidate preview
+
+- Source immuable 0.1.2, SHA256 04dcf13b27f3a998c9aabde98d297ed67df5b2b41155605f6253e327164f0a65.
+- RÉUSSI : 72 tests applicatifs et 19 parcours Chromium ; migrations depuis le schéma 0.1.1 avec conservation d'une fiche, de sa clé et d'un document privé.
+- À REVALIDER : cycle de vie complet et scénario de mise à jour depuis b8ef047930d7c64944b83a485c2c8f13dd414794.
+- Cause du blocage catalogue : niveau 0 publié alors que YunoHost exige >= 5 pour annoncer une mise à jour. Le niveau technique ARCenal sera documenté séparément du résultat officiel communautaire après qualification.
+
+## Historique des qualifications précédentes
 
 - RÉUSSI : application, 61 tests locaux et 16 parcours Chromium.
 - RÉUSSI : SSO/identité de proxy et refus d'accès testés ; données PostgreSQL locales.

@@ -27,10 +27,12 @@ jobs:
           python3 -m venv --system-site-packages /tmp/package-check-env
           /tmp/package-check-env/bin/pip install imgkit
           python3 tools/prepare_package_check.py /tmp/package_check
+          python3 -m unittest discover -s tools -p 'test_*.py' -v
           python3 /tmp/package_check/lib/parse_tests_toml.py "$GITHUB_WORKSPACE" > /tmp/package_plan.json
           sudo env PATH="/tmp/package-check-env/bin:$PATH" YNHDEV_BACKEND=incus DIST=bookworm YNH_BRANCH=stable /tmp/package_check/package_check.sh "$GITHUB_WORKSPACE"
           sudo chown -R "$USER:$USER" /tmp/package_check
-          python3 tools/verify_package_report.py /tmp/package_check
+          python3 /tmp/package_check/package_linter/package_linter.py "$GITHUB_WORKSPACE" --json > /tmp/linter_report.json
+          python3 tools/verify_package_report.py /tmp/package_check --linter-report /tmp/linter_report.json --upgrade-from b8ef047930d7c64944b83a485c2c8f13dd414794 --qualification-output /tmp/arcenal-qualification.json
       - name: Keep evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -40,4 +42,6 @@ jobs:
             /tmp/package_check/results_*.json
             /tmp/package_check/full_log_*.log
             /tmp/package_plan.json
+            /tmp/linter_report.json
+            /tmp/arcenal-qualification.json
           if-no-files-found: warn
