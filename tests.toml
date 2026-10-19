@@ -11,6 +11,7 @@ test_format = 1.0
 
     test_upgrade_from.b8ef047930d7c64944b83a485c2c8f13dd414794.name = "Mise à jour depuis 0.1.1~ynh5 (catalogue publié)"
     test_upgrade_from.3d882348b212835d9adc61c54416ad72a6185c04.name = "Mise à jour depuis 0.1.2~ynh1 (version distribuée)"
+    test_upgrade_from.37f06d73a9d2562b26fa0dc07d1447eeedb153e9.name = "Mise à jour depuis 0.2.0~ynh1 (version distribuée)"
 
     [default.curl_tests]
     dashboard.logged_on_sso = true
